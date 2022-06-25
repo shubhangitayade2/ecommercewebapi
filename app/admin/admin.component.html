@@ -1,0 +1,47 @@
+<table>
+    <tr>
+        <td>Product Name</td>
+        <td>
+            <input [(ngModel)]="adminModel.productName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Product type</td>
+        <td>
+            <input [(ngModel)]="adminModel.productDescription" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Cat Id</td>
+        <td>
+            <input [(ngModel)]="adminModel.catID" type="text">
+        </td>
+    </tr>
+    <input type="submit" (click)="Addadmin()">
+    <input type="button" (click)="getData()" value="getData"/>
+</table>
+<!-- {{CustomerModel.CustomerAmount}}
+{{CustomerModel.CustomerName}}
+{{CustomerModel.CustomerCode}} -->
+
+<table border="2">
+    <tr>
+        <td>Product name</td>
+        <td>Product description</td>
+        <td>cat id</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let Product of adminModels">
+        <td>
+            {{Product.productName}}
+        </td>
+        <td> {{Product.productDescription}}
+        </td>
+        <td> {{Product.catID}}
+        </td>
+        <td>
+            <input type="button" value="Edit" (click)="EditCustomer(Product)" />
+            <input type="button" value="Delete" (click)="DeleteCustomer(Product)" />
+        </td>
+    </tr>
+</table>
