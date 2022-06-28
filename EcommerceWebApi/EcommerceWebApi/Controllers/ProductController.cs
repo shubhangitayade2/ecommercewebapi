@@ -22,5 +22,14 @@ namespace EcommerceWebApi.Controllers
         {
             return db.TblProducts;
         }
+        [HttpPost]
+        public string Post([FromBody] TblProduct product)
+        {
+            db.TblProducts.Add(product);
+            db.SaveChanges();
+            return "success";
+        }
+
+
     }
 }
