@@ -25,7 +25,7 @@
                             <td >{{product.productName}}</td>
                             <!--<td style="width: 12%;">{{product.grandTotal}}</td>-->
                             <td>
-                                <button  class="btn btn-primary">Payment</button>
+                                <button  (click)="goto()" class="btn btn-primary">Payment</button>
                                 <button (click)="removeItem(product)" class="btn btn-danger">Remove<i class="fas fa-trash-alt"></i></button>
                             </td>
                         </tr>

@@ -17,8 +17,15 @@
             <input [(ngModel)]="adminModel.catID" type="text">
         </td>
     </tr>
+    
+    <tr>
+        <td>upload product</td>
+        <td>
+            
+            <input [(ngModel)]="adminModel.productImage" type="file" id="formFileMultiple">       </td>
+    </tr>
     <input type="submit" (click)="Addadmin()">
-    <input type="button" (click)="getData()" value="getData"/>
+    <input type="button" (click)="getData()" value="see user order"/>
 </table>
 <!-- {{CustomerModel.CustomerAmount}}
 {{CustomerModel.CustomerName}}
@@ -40,8 +47,16 @@
         <td> {{Product.catID}}
         </td>
         <td>
+            <td> {{Product.productImage}}
+            </td>
+            <td>
+    
+
+            
+
             <input type="button" value="Edit" (click)="EditCustomer(Product)" />
             <input type="button" value="Delete" (click)="DeleteCustomer(Product)" />
         </td>
     </tr>
 </table>
+

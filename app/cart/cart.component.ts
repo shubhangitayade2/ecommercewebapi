@@ -34,6 +34,9 @@ removeItem(item: any){
   emptycart(){
     this._cart.removeAllCart();
   }
+  goto(){
+    this._router.navigate(['/payment']);
+  }
 }
 
 

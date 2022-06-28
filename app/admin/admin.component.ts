@@ -1,6 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+//import { Component } from '@angular/core';
 import { Product } from '../models/Product';
+import { Component, OnInit } from '@angular/core';
+//import { Product } from '../models/Product';
+import { ProductService } from '../services/product.service';
+import {Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 //import { ProductService } from '../services/product.service';
 
@@ -11,12 +16,18 @@ import { Product } from '../models/Product';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
+
 export class AdminComponent {
+  cartservice: any;
+  //public productt : any;
+  //private _productservice: any;
 
   constructor(public httpc:HttpClient) {
    
 
   }
+ 
+  
   title = 'ecom';
   myname = 'shubhangi'
   adminModel: Product = new Product();
@@ -29,6 +40,8 @@ export class AdminComponent {
         
       productName:this.adminModel.productName,
       productDescription:this.adminModel.productDescription,
+      productImage:this.adminModel.productImage,
+
       catID:Number(this.adminModel.catID),
     }
     this.httpc.post("https://localhost:44339/api/Product",adminto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
@@ -58,4 +71,6 @@ export class AdminComponent {
   GetError(input:any){
     console.log(input);
   }
+  
+  
 }

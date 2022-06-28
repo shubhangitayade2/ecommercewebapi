@@ -7,9 +7,11 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <!-- The form -->
-      <form class="card-body-centre" action="action_page.php" >
-        <input type="text" placeholder="Search for products..." name="search">
+      <form class="card-body-centre" >
+        <form action="https://localhost:44339/api/Product" method="get" class="search-bar">
+                <input type="text" placeholder="Search for products..." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </form>
       <div class="navbar navbar-dark bg-info " style="width: 6rem;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RZkpxCs5r-8uACxaqTHia6_wwcIrEhfgDA&usqp=CAU" class="card-body-centre" height="90%" width="90%"
